@@ -1,0 +1,178 @@
+.Pmain-prodetail {
+  padding: 80px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.Pcontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Prow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.Pcolumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+}
+
+/* Restore stylish zigzag only on Desktop */
+@media (min-width: 769px) {
+  .Pcolumn:nth-child(1),
+  .Pcolumn:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Typography */
+.Pprice {
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.Pprice-value {
+  font-size: 32px;
+  color: #ff4c24;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.Pcurrency {
+  font-size: 24px;
+  color: #ff4c24;
+  font-weight: 700;
+}
+
+.Ptitle {
+  font-size: 34px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #222;
+  margin-top: 10px;
+  line-height: 1.1;
+}
+
+.Psubtitle {
+  font-size: 56px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  margin-top: -15px;
+  margin-bottom: 15px;
+  letter-spacing: -2px;
+  z-index: -1;
+}
+
+.Pdescription {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* Button */
+.Padd-button {
+  margin: 25px 0;
+}
+
+.Padd-button a {
+  text-decoration: none;
+  color: #ff4c24;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ff4c24;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.Padd-button a:hover {
+  color: #222;
+  border-bottom-color: #222;
+  letter-spacing: 2px;
+}
+
+/* Image & Animation */
+.Pimage-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.Pimage-container img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
+}
+
+.floating {
+  animation: floatingAnim 4s ease-in-out infinite;
+}
+
+@keyframes floatingAnim {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .Psubtitle {
+    font-size: 40px;
+  }
+  .Ptitle {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Prow {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .Pcolumn {
+    align-items: center;
+    text-align: center;
+  }
+
+  .Pdescription {
+    max-width: 100%;
+  }
+
+  .Psubtitle {
+    display: none; /* Hide huge background text on mobile for clarity */
+  }
+}
+
+/* Animation on scroll entry */
+.animate-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards ease-out;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

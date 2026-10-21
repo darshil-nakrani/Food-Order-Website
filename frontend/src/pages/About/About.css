@@ -1,0 +1,160 @@
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Banner section with linear gradient matching Tomato red brand */
+.about-banner {
+  background: linear-gradient(135deg, #ff4c24 0%, #ff7b5f 100%);
+  color: #ffffff;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 76, 36, 0.15);
+  margin-bottom: 40px;
+}
+
+.about-banner-title {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.about-banner-subtitle {
+  font-size: 18px;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+/* Image wrapper hover effect */
+.about-img-wrapper {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.about-img-wrapper img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-img-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* Story and details typography */
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: #ff4c24;
+  bottom: -6px;
+  left: 0;
+  border-radius: 20px;
+}
+
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+/* Stats panel */
+.about-stats-grid {
+  background: #fdf5f2;
+  border: 1px solid rgba(255, 76, 36, 0.08);
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+  padding: 30px 20px !important;
+  border-radius: 16px !important;
+  margin: 40px 0 !important;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 160px;
+}
+
+.stat-card h3 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ff4c24;
+  margin-bottom: 4px;
+}
+
+.stat-card p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Core Values Section Layout */
+.about-values .row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 24px !important;
+  margin-top: 30px !important;
+  justify-content: center !important;
+}
+
+.about-values .col-md-4 {
+  flex: 1 !important;
+  min-width: 280px !important;
+  max-width: 340px !important;
+}
+
+/* Core Values Cards */
+.value-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #f1f3f7 !important;
+  padding: 30px 24px !important;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02) !important;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 76, 36, 0.08) !important;
+  border-color: rgba(255, 76, 36, 0.2) !important;
+}
+
+.value-icon {
+  font-size: 36px;
+}
+
+.value-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.value-text {
+  font-size: 14px;
+  line-height: 1.6;
+}

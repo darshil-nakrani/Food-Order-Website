@@ -1,0 +1,343 @@
+.food-item {
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s;
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.food-item-image {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.food-item-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allows the info area to fill available space */
+}
+
+@media (max-width: 768px) {
+  .food-item-info {
+    padding: 15px;
+  }
+}
+
+.food-item-name-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.food-item-name-rating>p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.food-item-name-rating img {
+  width: 70px;
+}
+
+.food-item-desc-container {
+  min-height: 65px;
+  margin-bottom: 5px;
+}
+
+.food-item-desc {
+  color: #676767;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.read-more-btn {
+  color: #888;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 5px;
+  display: inline-block;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.read-more-btn:hover {
+  color: #333;
+}
+
+.food-item-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.food-item-price {
+  color: #ff4c24;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(135deg, #ff4c24, #ff7b5f);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(255, 76, 36, 0.2);
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 76, 36, 0.3);
+}
+
+.food-item-counter-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f8f8f8;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+
+.food-item-counter-bottom img {
+  width: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.food-item-counter-bottom img:hover {
+  transform: scale(1.1);
+}
+
+.food-item-counter-bottom p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.food-item-img-container {
+  position: relative;
+}
+
+.food-item-img-container .add {
+  width: 35px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.food-item-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.food-item-counter img {
+  width: 30px;
+}
+
+/* modal */
+
+/* Premium Modal Design */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeInOverlay 0.3s ease;
+}
+
+.modal {
+  background: white;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media (max-width: 768px) {
+  .modal {
+    flex-direction: column;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+.modal-img {
+  width: 45%;
+  object-fit: cover;
+  height: auto;
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .modal-img {
+    width: 100%;
+    min-height: 250px;
+  }
+}
+
+.modal-content-area {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.modal h2 {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.modal p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.modal h3 {
+  font-size: 28px;
+  color: #ff4c24;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  color: #333;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+  background: #ff4c24;
+  color: white;
+}
+
+.modal-add-btn, .checkout-btn {
+  background: linear-gradient(135deg, #ff4c24, #ff7b5f);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.modal-add-btn:hover, .checkout-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 76, 36, 0.3);
+}
+
+.modal-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.modal-counter button {
+  background: white;
+  border: 1px solid #ddd;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.modal-counter button:hover {
+  background: #ff4c24;
+  color: white;
+  border-color: #ff4c24;
+}
+
+.modal-counter span {
+  font-size: 18px;
+  font-weight: 600;
+  min-width: 30px;
+  text-align: center;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from { transform: translateY(50px) scale(0.95); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}

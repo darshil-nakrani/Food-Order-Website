@@ -1,0 +1,65 @@
+.food-display {
+  margin-top: 30px;
+}
+
+.food-display h2 {
+  font-size: max(2vw, 24px);
+  font-weight: 600;
+}
+
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin-top: 30px;
+  gap: 30px;
+  row-gap: 50px;
+}
+
+.modal-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.modal-counter button {
+  background: #ff6347;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-counter span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.checkout-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff6347, #ff8266);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkout-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}

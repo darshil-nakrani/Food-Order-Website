@@ -1,0 +1,92 @@
+.privacy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Banner header with linear gradient matching Tomato red brand */
+.privacy-banner {
+  background: linear-gradient(135deg, #323232 0%, #474747 100%);
+  color: #ffffff;
+  margin-top: 100px;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.privacy-banner-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.privacy-banner-subtitle {
+  font-size: 16px;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+/* Legal Reader Card */
+.privacy-card {
+  background: #ffffff;
+  border: 1px solid #f1f3f7;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  padding: 10px 30px;
+}
+
+.lead-text {
+  font-size: 17px;
+  line-height: 1.7;
+  padding: 20px 0px;
+}
+
+.policy-section {
+  border-bottom: 1px solid #f9fafb;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.policy-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.policy-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.policy-desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #4b5563;
+  margin-bottom: 12px;
+}
+
+.policy-list {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.policy-list li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.brand-link {
+  color: #ff4c24;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.brand-link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
